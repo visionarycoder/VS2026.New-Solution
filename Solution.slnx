@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Configuration Name="Debug|Any CPU" />
+    <Configuration Name="Release|Any CPU" />
+  </Configurations>
+  <Projects>
+    <!-- Add your projects here -->
+    <!-- Example: <Project Path="src\MyProject\MyProject.csproj" /> -->
+  </Projects>
+</Solution>
