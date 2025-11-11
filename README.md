@@ -14,6 +14,8 @@ A professional Visual Studio 2026 solution template using the new `.slnx` format
 
 ## Quick Start
 
+> **New to this template?** Check out the [Quick Start Guide](QUICKSTART.md) for a step-by-step walkthrough!
+
 ### Prerequisites
 
 - Visual Studio 2026 or later
@@ -83,8 +85,14 @@ If you prefer manual setup:
 ├── tests/
 │   └── README.md                 # Testing guidelines
 ├── .best-practices               # Team best practices
+├── .editorconfig                 # Editor configuration
 ├── .gitignore                    # Git ignore rules
+├── Directory.Build.props         # MSBuild properties
+├── global.json                   # .NET SDK version
+├── init-solution.ps1             # PowerShell init script
+├── init-solution.sh              # Bash init script
 ├── LICENSE                       # Project license
+├── QUICKSTART.md                 # Quick start guide
 ├── README.md                     # This file
 └── Solution.slnx                 # VS2026 solution file
 ```
