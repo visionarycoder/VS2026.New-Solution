@@ -1,0 +1,52 @@
+<Project>
+  <!-- Common properties for all projects in the solution -->
+  <PropertyGroup>
+    <!-- Language version -->
+    <LangVersion>latest</LangVersion>
+    
+    <!-- Nullable reference types -->
+    <Nullable>enable</Nullable>
+    
+    <!-- Enable implicit usings for .NET 6+ -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <!-- Treat warnings as errors in Release builds -->
+    <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">true</TreatWarningsAsErrors>
+    
+    <!-- Generate XML documentation -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    
+    <!-- Deterministic builds -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Code analysis -->
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <!-- Package metadata - customize these for your solution -->
+  <PropertyGroup>
+    <Authors>Your Name or Organization</Authors>
+    <Company>Your Company</Company>
+    <Product>Your Product</Product>
+    <Copyright>Copyright © $(Company) $([System.DateTime]::Now.Year)</Copyright>
+    
+    <!-- Versioning -->
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix Condition="'$(Configuration)' == 'Debug'">dev</VersionSuffix>
+    
+    <!-- Repository info -->
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/yourusername/yourrepo</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    
+    <!-- Source link support for debugging -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+</Project>

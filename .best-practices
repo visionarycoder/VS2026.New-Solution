@@ -1,0 +1,55 @@
+# Best Practices for This Solution
+
+## Code Organization
+- **src/**: All production source code
+- **tests/**: All test projects (unit, integration, etc.)
+- **docs/**: Documentation, ADRs, and guides
+- **.github/**: GitHub-specific files (workflows, Copilot instructions)
+
+## Naming Conventions
+- **Projects**: Use PascalCase for project names (e.g., `MyCompany.MyProduct.Core`)
+- **Namespaces**: Match folder structure and project names
+- **Files**: One primary type per file, file name matches type name
+- **Tests**: Name test classes `[TypeUnderTest]Tests` or `[TypeUnderTest]Should`
+
+## Version Control
+- Write clear, concise commit messages
+- Keep commits focused and atomic
+- Use feature branches for development
+- Squash commits when merging to main
+
+## Dependencies
+- Keep NuGet packages up to date
+- Document reasons for major dependencies
+- Prefer widely-adopted, well-maintained packages
+- Minimize dependency tree depth
+
+## Testing Strategy
+- Unit tests for business logic
+- Integration tests for external dependencies
+- End-to-end tests for critical user flows
+- Mock external dependencies in unit tests
+
+## Security
+- Never commit secrets or credentials
+- Use user secrets or environment variables for sensitive data
+- Keep dependencies updated for security patches
+- Perform security scans regularly
+
+## Performance
+- Profile before optimizing
+- Avoid premature optimization
+- Use async/await for I/O-bound operations
+- Consider caching for expensive operations
+
+## Documentation
+- Keep README current and comprehensive
+- Document "why" not "what" in code comments
+- Use ADRs for architectural decisions
+- Update docs with code changes
+
+## CI/CD
+- All tests must pass before merging
+- Automated builds on every commit
+- Deploy from main branch only
+- Use semantic versioning for releases
